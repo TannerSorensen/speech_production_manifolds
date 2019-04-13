@@ -28,4 +28,10 @@ Repeat for as many speakers as desired.
 
 3. Save png files and labels to npz file.
 
-Run the python script `save_npz.py` to create file `nsf_vtsf.npz`, which contains image data as NumPy array, phone labels, and speaker labels. The data-set is split into training, validation, and test sets.
+Run the python script `save_npz.py` 
+
+```bash
+./save_npz.py speech_production_manifolds_data/
+```
+
+This will create a file `nsf_vtsf.npz`, which contains image data as NumPy array, phone labels, and speaker labels. The data-set is split into training, validation, and test sets.
