@@ -6,7 +6,7 @@ Manifold representations of vocal tract movements in real-time magnetic resonanc
 
 1. Download data as avi files
 
-``bash
+```bash
 scp -r tsorense@siren.usc.edu:/span/home/tsorense/speech_production_manifolds_data/ .
 ```
 
