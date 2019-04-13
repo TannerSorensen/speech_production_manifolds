@@ -26,8 +26,11 @@ def label(f,df):
     
 
 if __name__=="__main__":
+
+    data_path = sys.argv[1]
+
     # get list of filenames
-    fname = glob(os.path.join('data','F101','png','*','*.png'))
+    fname = glob(os.path.join(data_path,'*','png','*','*.png'))
 
     # get list of images
     print('Loading image data')
