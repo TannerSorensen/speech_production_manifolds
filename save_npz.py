@@ -23,7 +23,13 @@ def label(f,df):
     sys.stdout.write('\r'+f)
 
     return phone, spkr
-    
+
+def read_nsf_vtsf(filename):
+    with np.load(filename) as f:
+        return f['x_train'], f['x_val'], f['x_test'], \
+            f['phone_train'], f['phone_val'], f['phone_test'], \
+            f['spkr_train'], f['spkr_val'], f['spkr_test'], \
+            f['fname_train'], f['fname_val'], f['fname_test']
 
 if __name__=="__main__":
 
