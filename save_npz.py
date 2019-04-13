@@ -12,7 +12,7 @@ def label(f,df):
     spkr, _, avi, filename = f.split(os.path.sep)[-4:]
     if avi in df.avi.values:
         img = float(filename.replace('.png',''))
-        phone = df.loc[df[(df.avi == avi) & (df.img == float(img))].index,'phone'].values
+        phone = df.loc[df[(df.avi == avi) & (df.img == img)].index,'phone'].values
         if phone.shape[0] > 0:
             phone = phone[0]
         else:
@@ -42,8 +42,7 @@ if __name__=="__main__":
     print('')
 
     print('Convert images to float32, normalize to range [0,1], reshape to size (?,84,84,1)')
-    mx = np.max(img, axis=0)
-    img = img.astype('float32') / mx
+    img = np.float32(img) / img.max()
     img = np.reshape(img, img.shape+(1,))
 
     # read manual annotations
