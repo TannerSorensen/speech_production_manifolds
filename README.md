@@ -1,4 +1,4 @@
-# speech_production_manifolds
+# Speech Production Manifolds
 
 Manifold representations of vocal tract movements in real-time magnetic resonance images
 
@@ -14,17 +14,7 @@ The folder `speech_production_manifolds_data` contains one subfolder for each sp
 Inside each speaker folder there is a folder `avi` with imaging data in avi format
 and a folder `wav` with concurrently recorded audio files in wav format.
 
-2. Download data as avi files
-
-```bash
-scp -r tsorense@siren.usc.edu:/span/home/tsorense/speech_production_manifolds_alignments/ .
-```
-
-The folder `speech_production_manifolds_alignments` contains one subfolder for each speaker (`F101`, `M101`, `F102`, `M102`, ...).
-Inside each speaker folder there is a folder `align` with forced alignments obtained with Gentle from the wav files in folder `wav` and transcripts in folder `trans`.
-Other files and folders can be ignored (or simply not downloaded), as they were only used to make the alignments and are not suitable for analysis.
-
-3. Convert avi files to png series
+2. Convert avi files to png series
 
 Navigate to a speaker directory (e.g., `speech_production_manifolds_data/F101/`) and run the following command.
 
@@ -35,6 +25,16 @@ Navigate to a speaker directory (e.g., `speech_production_manifolds_data/F101/`)
 This command creates a folder `png` containing one subfolder for each avi file containing the images in png format.
 
 Repeat for as many speakers as desired.
+
+3. Download Gentle forced alignments as json files
+
+```bash
+scp -r tsorense@siren.usc.edu:/span/home/tsorense/speech_production_manifolds_alignments/ .
+```
+
+The folder `speech_production_manifolds_alignments` contains one subfolder for each speaker (`F101`, `M101`, `F102`, `M102`, ...).
+Inside each speaker folder there is a folder `align` with forced alignments in json format.
+Other files and folders can be ignored (or simply not downloaded), as they were only used to make the alignments and are not suitable for analysis.
 
 4. Save png files and labels to npz file.
 
