@@ -41,7 +41,7 @@ Repeat for as many speakers as desired.
 Run the python script `save_npz.py` 
 
 ```bash
-./save_npz.py speech_production_manifolds_data/
+./save_npz.py speech_production_manifolds_data/ speech_production_manifolds_alignments/
 ```
 
 This will create a file `nsf_vtsf.npz`, which contains image data as NumPy array, phone labels, and speaker labels. The data-set is split into training, validation, and test sets.
@@ -51,5 +51,5 @@ The following Python code chunk illustrates how to load `nsf_vtsf.npz` in Python
 ```python
 from save_npz import read_nsf_vtsf
 x_train, x_val, x_test, phone_train, phone_val, phone_test, spkr_train, spkr_val, spkr_test, \
-    filenames_train, filenames_val, filenames_test = read_nsf_vtsf('nsf_vtsf.npz')
+    align_train, align_val, align_test, filenames_train, filenames_val, filenames_test = read_nsf_vtsf('nsf_vtsf.npz')
 ```
