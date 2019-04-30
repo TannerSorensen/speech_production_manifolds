@@ -125,7 +125,7 @@ if __name__=="__main__":
         = train_test_split(x_train, fname_train, phone_train, spkr_train, align_train, test_size=0.33, stratify=spkr_train)
 
     print('Saving to disk')
-    np.savez('nsf_vtsf.npz', \
+    np.savez_compressed('nsf_vtsf.npz', \
         x_train=x_train, x_val=x_val, x_test=x_test, \
         phone_train=phone_train, phone_val=phone_val, phone_test=phone_test, \
         spkr_train=spkr_train, spkr_val=spkr_val, spkr_test=spkr_test, \
