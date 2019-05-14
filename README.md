@@ -2,6 +2,14 @@
 
 Manifold representations of vocal tract movements in real-time magnetic resonance images
 
+## Direct download links
+
+You do not need to run the code in this repository to access the data. The following list indicates where to find various data-sets on `siren.usc.edu`.
+
+- avi files are available in folder `/span/home/tsorense/speech_production_manifolds_data/`.
+- Gentle forced alignments are available as json files in folder `/span/home/tsorense/speech_production_manifolds_alignments/`.
+- image data as NumPy array, phone labels, and speaker labels are available in the file `/span/home/tsorense/speech_production_manifolds/nsf_vtsf.npz`.
+
 ## Getting started
 
 1. Download data as avi files
