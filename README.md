@@ -27,7 +27,7 @@ and a folder `wav` with concurrently recorded audio files in wav format.
 Navigate to a speaker directory (e.g., `speech_production_manifolds_data/F101/`) and run the following command.
 
 ```bash
-./write_png_series.sh avi/
+./write_png_image_series.sh avi/
 ```
 
 This command creates a folder `png` containing one subfolder for each avi file containing the images in png format.
